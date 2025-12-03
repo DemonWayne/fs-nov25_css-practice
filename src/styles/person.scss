@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+.person {
+  position: relative;
+  transition: transform $default-transition;
+}
+
+.person__photo {
+  position: relative;
+}
+
+.photo__image {
+  width: $photo-size;
+  height: $photo-size;
+  border-radius: $photo-border-radius;
+  transition: border-radius $default-transition;
+}
+
+.photo__rank {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: $rank-size;
+  width: $rank-size;
+  height: $rank-size;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-120%);
+  font-weight: bold;
+  font-size: $rank-font-size;
+  color: $rank-color;
+}
+
+.person__details {
+  display: grid;
+  place-items: center;
+}
+
+.details__extra {
+  font-size: $extra-font-size;
+  opacity: 0;
+}
+
+.details__name {
+  font-size: $name-font-size;
+  font-weight: bold;
+  color: $name-color;
+}
+
+.extra__sport::after {
+  content: ",";
+}
+
+.extra__pay {
+  &::before {
+    content: "$";
+  }
+
+  &::after {
+    content: "M";
+  }
+}
+
+.person:hover {
+  transform: scale(1.2);
+  background-color: $person-hover-background-color;
+  border-radius: $person-hover-border-radius;
+  z-index: 2;
+}
+
+.person:hover .photo__image {
+  border-radius: $photo-border-radius-hover;
+}
+
+.person:hover .details__extra {
+  opacity: 1;
+}

@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, $photo-size);
+  justify-content: center;
+  padding-top: $people-padding-top;
+  gap: $people-gap;
+}
+
+@media (min-width: 1000px) {
+  .people {
+    grid-template-columns: repeat(4, $photo-size);
+  }
+}

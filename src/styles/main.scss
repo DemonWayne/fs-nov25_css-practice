@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'people';
+@use 'person';
+
+body {
+  margin: 0;
+  font-family: $font-family;
+}
