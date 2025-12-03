@@ -41,7 +41,7 @@
   position: absolute;
   top: 50%;
   right: 5%;
-  transform: translateY(-120%);
+  transform: translateY(-50%);
 }
 
 .person__details {
